@@ -15,7 +15,7 @@ class Auth_model extends CI_Model
 function verify_email($key)
  {
   $this->db->where('verification_key', $key);
-  $this->db->where('is_email_verified', 'yes');
+  $this->db->where('is_email_verified', 'NO');
   $query = $this->db->get('users');
   if($query->num_rows() > 0)
   {

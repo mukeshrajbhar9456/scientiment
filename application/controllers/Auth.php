@@ -8,10 +8,10 @@ class Auth extends CI_Controller
 	 public function __construct()
  {
   parent::__construct();
-  // if($this->session->userdata('id'))
-  // {
-  //  redirect('Admin/welcome');
-  // }
+  if($this->session->userdata('id'))
+  {
+   redirect('Admin/welcome');
+  }
 $this->load->model('dynamic_dependent_model');
   $this->load->model('Auth_model');
  }
